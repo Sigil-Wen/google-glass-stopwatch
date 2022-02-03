@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 26.1.1">
+
+    <issue
+        id="LintError"
+        severity="Error"
+        message="Can&apos;t find API database; API check not performed"
+        category="Lint"
+        priority="10"
+        summary="Lint Failure"
+        explanation="This issue type represents a problem running lint itself. Examples include failure to find bytecode for source files (which means certain detectors could not be run), parsing errors in lint configuration files, etc.
+These errors are not errors in your own code, but they are shown to make it clear that some checks were not completed.">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        android:targetSdkVersion=&quot;19&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/AndroidManifest.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 19"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build.gradle"
+            line="16"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `minSdkVersion` value (`19`) is not used; it is always overridden by the value specified in the Gradle build script (`19`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:minSdkVersion=&quot;19&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/AndroidManifest.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `targetSdkVersion` value (`19`) is not used; it is always overridden by the value specified in the Gradle build script (`19`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:targetSdkVersion=&quot;19&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/AndroidManifest.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="PxUsage"
+        severity="Warning"
+        message="Avoid using &quot;`px`&quot; as units; use &quot;`dp`&quot; instead"
+        category="Correctness"
+        priority="2"
+        summary="Using &apos;px&apos; dimension"
+        explanation="For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if `myView.getWidth()` returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source."
+        url="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        urls="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        errorLine1="        android:textSize=&quot;160px&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_countdown.xml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="PxUsage"
+        severity="Warning"
+        message="Avoid using `&quot;px&quot;` as units; use `&quot;dp&quot;` instead"
+        category="Correctness"
+        priority="2"
+        summary="Using &apos;px&apos; dimension"
+        explanation="For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if `myView.getWidth()` returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source."
+        url="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        urls="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        errorLine1="        &lt;item name=&quot;android:layout_width&quot;>150px&lt;/item>"
+        errorLine2="                                          ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/values/styles.xml"
+            line="19"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="PxUsage"
+        severity="Warning"
+        message="Avoid using `&quot;px&quot;` as units; use `&quot;dp&quot;` instead"
+        category="Correctness"
+        priority="2"
+        summary="Using &apos;px&apos; dimension"
+        explanation="For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if `myView.getWidth()` returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source."
+        url="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        urls="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        errorLine1="        &lt;item name=&quot;android:layout_height&quot;>150px&lt;/item>"
+        errorLine2="                                           ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/values/styles.xml"
+            line="20"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="PxUsage"
+        severity="Warning"
+        message="Avoid using `&quot;px&quot;` as units; use `&quot;dp&quot;` instead"
+        category="Correctness"
+        priority="2"
+        summary="Using &apos;px&apos; dimension"
+        explanation="For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if `myView.getWidth()` returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source."
+        url="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        urls="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        errorLine1="        &lt;item name=&quot;android:textSize&quot;>130px&lt;/item>"
+        errorLine2="                                      ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/values/styles.xml"
+            line="25"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="PxUsage"
+        severity="Warning"
+        message="Avoid using `&quot;px&quot;` as units; use `&quot;dp&quot;` instead"
+        category="Correctness"
+        priority="2"
+        summary="Using &apos;px&apos; dimension"
+        explanation="For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if `myView.getWidth()` returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source."
+        url="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        urls="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        errorLine1="        &lt;item name=&quot;android:layout_width&quot;>55px&lt;/item>"
+        errorLine2="                                          ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/values/styles.xml"
+            line="29"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="PxUsage"
+        severity="Warning"
+        message="Avoid using `&quot;px&quot;` as units; use `&quot;dp&quot;` instead"
+        category="Correctness"
+        priority="2"
+        summary="Using &apos;px&apos; dimension"
+        explanation="For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if `myView.getWidth()` returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source."
+        url="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        urls="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        errorLine1="        &lt;item name=&quot;android:layout_height&quot;>55px&lt;/item>"
+        errorLine2="                                           ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/values/styles.xml"
+            line="30"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="ExportedService"
+        severity="Warning"
+        message="Exported service does not require permission"
+        category="Security"
+        priority="5"
+        summary="Exported service does not require permission"
+        explanation="Exported services (services which either set `exported=true` or contain an intent-filter and do not specify `exported=false`) should define a permission that an entity must have in order to launch the service or bind to it. Without this, any application can use this service."
+        errorLine1="        &lt;service"
+        errorLine2="        ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/AndroidManifest.xml"
+            line="38"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;@color/black&quot; >"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_chronometer.xml"
+            line="21"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;@color/black&quot; >"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_countdown.xml"
+            line="21"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This `LinearLayout` layout or its `FrameLayout` parent is useless; transfer the `background` attribute to the other view"
+        category="Performance"
+        priority="2"
+        summary="Useless parent layout"
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="    ^"
+        quickfix="adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_chronometer.xml"
+            line="22"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/ic_colon.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon *really* is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_colon.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/ic_interpunc.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon *really* is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_interpunc.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/ic_lap.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon *really* is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_lap.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/ic_stop.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon *really* is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_stop.png"/>
+    </issue>
+
+    <issue
+        id="GoogleAppIndexingWarning"
+        severity="Warning"
+        message="App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent filter. See issue explanation for more details."
+        category="Usability"
+        priority="5"
+        summary="Missing support for Firebase App Indexing"
+        explanation="Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search."
+        url="https://g.co/AppIndexing/AndroidStudio"
+        urls="https://g.co/AppIndexing/AndroidStudio"
+        errorLine1="    &lt;application"
+        errorLine2="    ^"
+        quickfix="studio">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/AndroidManifest.xml"
+            line="26"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="        &lt;ImageView"
+        errorLine2="        ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_chronometer.xml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="        &lt;ImageView"
+        errorLine2="        ^"
+        quickfix="studio,adt">
+        <location
+            file="/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_chronometer.xml"
+            line="36"
+            column="9"/>
+    </issue>
+
+</issues>

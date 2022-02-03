@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/release/drawable/ic_stop.png",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_stop.png"
+    },
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/release/drawable/ic_interpunc.png",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_interpunc.png"
+    },
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/release/drawable/ic_colon.png",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_colon.png"
+    },
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/release/drawable/ic_lap.png",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/drawable/ic_lap.png"
+    }
+]

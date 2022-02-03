@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/debug/raw/start.ogg",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/raw/start.ogg"
+    },
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/debug/raw/countdown_bip.ogg",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/raw/countdown_bip.ogg"
+    }
+]

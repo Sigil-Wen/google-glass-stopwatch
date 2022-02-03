@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/release/layout/card_chronometer.xml",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_chronometer.xml"
+    },
+    {
+        "merged": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/build/intermediates/res/merged/release/layout/card_countdown.xml",
+        "source": "/Users/senkubuilds/Desktop/gdk-stopwatch-sample-master/app/src/main/res/layout/card_countdown.xml"
+    }
+]
